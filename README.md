@@ -93,3 +93,21 @@ Simple [map reduce module](https://github.com/istarkov/babel-plugin-arrow-test/b
 ### recompose
 
 [Functional react component with recompose](https://github.com/istarkov/babel-plugin-arrow-test/blob/master/test/reactComponent.jsx) and [test](https://github.com/istarkov/babel-plugin-arrow-test/blob/master/test/index.spec.js#L11-L15)
+
+## Install
+
+```
+npm install --save-dev babel-plugin-arrow-test
+```
+
+Add to `.babelrc`
+
+```
+"env": {
+  "ARROW": {
+    "plugins": [
+      ["arrow-test", {"regexp": "@t\\(([^\\)]+)\\)"}]
+    ]
+  }
+}
+```
