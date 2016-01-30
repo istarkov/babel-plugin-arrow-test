@@ -1,0 +1,33 @@
+{
+  "name": "babel-plugin-arrow-test",
+  "version": "0.1.0",
+  "description": ".",
+  "main": "lib/index.js",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "babel src --out-dir lib",
+    "lint": "eslint src",
+    "prepublish": "npm run lint && npm run build"
+  },
+  "keywords": [
+    "babel",
+    "babel 6",
+    "arrow",
+    "test"
+  ],
+  "author": "Ivan Starkov",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-eslint": "^4.1.6",
+    "babel-plugin-transform-runtime": "^6.4.3",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-2": "^6.3.13",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^4.0.0",
+    "eslint-plugin-react": "^3.16.1",
+    "rimraf": "^2.5.1"
+  }
+}
