@@ -81,8 +81,11 @@ And run with
 NODE_ENV=ARROW mocha
 ```
 
-All anonymous functions with comment you describe as plugin `regexp` parameter will be
-exported with `regexp` capture so you can test them
+All anonymous functions with comment will be exported.
+
+Comment regexp and function name capture is set with next setting `"regexp": "@t\\(([^\\)]+)\\)"`
+
+You can change it on any regexp and capture you like.
 
 ## Examples
 
