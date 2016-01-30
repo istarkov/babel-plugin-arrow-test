@@ -1,6 +1,6 @@
 import expect from 'expect';
 
-describe('must import anonymouse functions', () => {
+describe('plugin tests', () => {
   it('must import anonymouse functions', () => {
     const { vPlusOne, vReducer } = require('./anonymous');
     expect(vPlusOne(0)).toEqual(1);
