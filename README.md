@@ -15,12 +15,12 @@ blabla
   .groupBy( ... )
 ```
 
-Writing full test of this flow can be not an easy task for real flows with many `map`, `reduce` and other functions we like. But almost every function inside flow is easily testable.
+For real flows with many `map`, `reduce` and other functions test of this flow can be not an easy task. But almost every function inside flow is easily testable.
 
-But even if any of arrow function in this flow is easily testable, to test each I need to write something like this.
+Even if any of arrow function in this flow is easily testable, to test each I need to write something like this.
 
 ```javascript
-// now I can import mappingFunction and test
+// now I can import mapFn, reduceFn and test them
 export const mapFn = ({ x, y }) => ({z: x + y});
 export const reduceFn = (memo, { z }) =>  ... ;
 ...
@@ -33,7 +33,7 @@ blabla
 
 This can easily be tested, but source is unreadable. Function definition is far outside from place I use it.
 
-So this plugin allows you to solve this problem.
+This plugin allows you to solve this problem.
 
 ## Solution
 
@@ -68,6 +68,7 @@ Write test
 // test anonymous mapFn reduceFn
 describe('must import anonymouse functions', () => {
   it('must import anonymouse functions', () => {
+    // It's a magic - anonymous functions imported here
     const { mapFn, reduceFn } = require('./file.js');
     expect(mapFn({ x: 1, y: 2 })).toEqual({ z: 3});
   });
@@ -81,7 +82,7 @@ And run with
 NODE_ENV=ARROW mocha
 ```
 
-All anonymous functions with comment will be exported.
+All anonymous functions with comment like `@t(Name)` will be exported.
 
 Comment regexp and function name capture is set with next setting `"regexp": "@t\\(([^\\)]+)\\)"`
 
