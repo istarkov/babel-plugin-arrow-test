@@ -26,8 +26,8 @@ export const reduceFn = (memo, { z }) =>  ... ;
 ...
 
 blabla
-  .map(mappingFunction)
-  .reduce(reduceFunction)
+  .map(mapFn)
+  .reduce(reduceFn)
   ...
 ```
 
