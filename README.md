@@ -15,7 +15,7 @@ blabla
   .groupBy( ... )
 ```
 
-For real flows with many `map`, `reduce` and other functions test of this flow can be not an easy task. But almost every function inside flow is easily testable.
+For real flows with many `map`, `reduce` and other functions, test of this flow can be not an easy task. But almost every function inside flow is easily testable.
 
 Even if any of arrow function in this flow is easily testable, to test each I need to write something like this.
 
