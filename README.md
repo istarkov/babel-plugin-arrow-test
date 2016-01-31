@@ -1,4 +1,6 @@
 
+[![Build Status](https://travis-ci.org/istarkov/babel-plugin-arrow-test.svg?branch=master)](https://travis-ci.org/istarkov/babel-plugin-arrow-test)
+
 # babel-plugin-arrow-test
 
 Babel 6 plugin, allows you to test anonymous javascript arrow functions easily.
